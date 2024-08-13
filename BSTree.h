@@ -28,23 +28,23 @@ private:
 public:
 	BSTree();
 	BSTree(Node<T>* root);
-	BSTree(const BSTree& other);//checked
-	~BSTree();//checked??
-	Node<T>* get_root(){ return root; }//checked
-	int get_height();//checked
+	BSTree(const BSTree& other);
+	~BSTree();
+	Node<T>* get_root(){ return root; }
+	int get_height();
 	Node<T>* search(T k);//checked
-	Node<T>* maximum(Node<T>* ro);//checked
-	Node<T>* minimum(Node<T>* ro);//checked
-	Node<T>* predecessor(T k);//checked
-	Node<T>* predecessor(Node<T>* k);//checked
-	Node<T>* successor(T k);//checked
-	Node<T>* successor(Node<T>* k);//checked
-	bool delete_index(T k);//checked
-	bool insert(T k);//checked
-	void inorder_walk(vector<T>& res);//checked
-	void preorder_walk(vector<T>& res);//checked
-	void postorder_walk(vector<T>& res);//checked
-	void see();//checked
+	Node<T>* maximum(Node<T>* ro);//以ro作为根节点向下查找最值
+	Node<T>* minimum(Node<T>* ro);
+	Node<T>* predecessor(T k);
+	Node<T>* predecessor(Node<T>* k);
+	Node<T>* successor(T k);
+	Node<T>* successor(Node<T>* k);
+	bool delete_index(T k);
+	bool insert(T k);
+	void inorder_walk(vector<T>& res);//将结果保存至res
+	void preorder_walk(vector<T>& res);
+	void postorder_walk(vector<T>& res);
+	void see();//层序遍历
 };
 
 
